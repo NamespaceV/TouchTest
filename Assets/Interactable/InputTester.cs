@@ -24,11 +24,9 @@ public class InputTester : MonoBehaviour
 
     private void SpawnMarker(Vector2 touchPosition)
     {
-        return;
         var depth = -Camera.main.transform.position.z;
         var worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(touchPosition.x, touchPosition.y, depth));
         Debug.Log($"Spawn pos {worldPosition}");
-        var m = Instantiate(MarkerPrefab, worldPosition, Quaternion.identity);
-        Destroy(m, 0.1f);
+        Instantiate(MarkerPrefab, worldPosition, Quaternion.identity);
     }
 }
