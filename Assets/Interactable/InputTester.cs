@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputScript : MonoBehaviour
+public class InputTester : MonoBehaviour
 {
     public GameObject MarkerPrefab;
     void Update()
@@ -24,6 +24,7 @@ public class InputScript : MonoBehaviour
 
     private void SpawnMarker(Vector2 touchPosition)
     {
+        return;
         var depth = -Camera.main.transform.position.z;
         var worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(touchPosition.x, touchPosition.y, depth));
         Debug.Log($"Spawn pos {worldPosition}");
